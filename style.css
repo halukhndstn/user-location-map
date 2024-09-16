@@ -1,0 +1,156 @@
+/* Sidebar toggle button styles */
+.sidebar-toggle {
+    position: fixed;
+    top: 20px;
+    right: 20px; /* Position at the top right corner */
+    z-index: 2;
+    cursor: pointer;
+    padding: 10px;
+    background-color: #3f186cfd;
+    color: white;
+    border: none;
+    transition: right 0.5s; /* Animation for sliding in from the right */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Font settings */
+}
+
+/* Styles for #map element */
+#map {
+    height: 100vh;
+    width: 100%; /* Occupy full screen width */
+    margin-left: 0; /* No left margin needed */
+}
+
+/* Shift content to the right when sidebar is open */
+.content.active {
+    margin-left: 250px; /* Shift to the left by the sidebar's width */
+}
+
+/* Sidebar CSS */
+.sidebar {
+    height: 100vh;
+    width: 250px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0; /* Position on the left edge */
+    background-color: #3f186cfd;
+    overflow-x: hidden;
+    transition: left 0.5s;
+}
+
+.sidebar a {
+    padding: 15px;
+    text-decoration: none;
+    font-size: 20px;
+    color: white;
+    display: block;
+    transition: background-color 0.3s;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Font settings */
+}
+
+.sidebar a:hover {
+    background-color: #531e84; /* Background color on hover */
+}
+
+/* Styles for the top part of the sidebar, including logo and title */
+.sidebar-top {
+    text-align: center; /* Center align the title */
+    padding-top: 20px; /* Add some space above the logo and title */
+}
+
+/* University logo and title styles */
+.university-logo {
+    width: 80%; /* Width setting */
+    height: auto; /* Auto-adjust height */
+    margin: 0 auto; /* Center the logo */
+    display: block;
+}
+
+.sidebar a:first-child {
+    font-size: 28px; /* Title font size */
+    font-weight: bold; /* Bold text */
+    margin-bottom: 20px; /* Space below the title */
+}
+
+/* Styles for Businesses and Reviews links */
+.sidebar a:nth-child(2),
+.sidebar a:nth-child(3) {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+/* Styles for other links */
+.sidebar a:not(:first-child) {
+    padding: 12px 15px; /* Internal padding */
+    font-size: 20px; /* Font size */
+    font-weight: normal; /* Normal font weight */
+}
+
+/* Content styles */
+.content {
+    transition: margin-left 0.5s; /* Duration of the animation */
+}
+
+/* Styles for #map when sidebar is open */
+#map {
+    height: 100vh;
+    width: calc(100% - 250px); /* Width after subtracting sidebar width */
+    margin-left: 250px; /* Compensate for sidebar width on the left */
+}
+
+/* Adjust position of the toggle button when sidebar is open */
+.sidebar-toggle.active {
+    right: 250px; /* Adjust right position based on sidebar width */
+}
+
+.popup-content {
+    /* Styles for the popup content */
+    color: black; /* Example style */
+    /* Other styles */
+}
+
+/* Custom marker styles (if used) */
+.custom-marker {
+    /* Custom marker styles */
+}
+
+.checkbox-container {
+    padding: 15px;
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.cafes-list h3 {
+    margin: 10px 0;
+    color: white;
+}
+
+.cafes-list ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.cafes-list ul li {
+    padding: 5px;
+    margin-bottom: 5px;
+}
+
+.cafes-list ul li label {
+    color: white;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.cafes-list ul li input[type="checkbox"] {
+    margin-right: 5px;
+}
+
+/* Styles for the cafe list */
+.cafes-list {
+    display: none; /* Initially hidden */
+}
+
+/* Class to show/hide the cafe list when the Businesses button is clicked */
+.show-cafes-list {
+    display: block;
+}
